@@ -1,0 +1,65 @@
+
+.p-lineup__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.p-lineup__item {
+    width: calc( 100% / 2 );
+    margin-bottom: rem(20);
+    @include mq(){
+        width: calc( 100% / 5 );
+    }
+}
+
+.p-lineup__image {
+    margin-bottom: rem(5);
+}
+
+.p-lineup__info {
+    padding: 0 rem(3);
+}
+
+.p-lineup__name {
+    font-size: rem(13);
+    font-weight: $bold;
+    @include mq(){
+        font-size: rem(16);
+    }
+}
+
+//　３点リーダー　chrome safariのみ対応
+// .p-lineup__text {
+//     font-size: rem(14);
+//     display: -webkit-box;
+//     -webkit-box-orient: vertical;
+//     -webkit-line-clamp: 2;
+//     overflow: hidden;
+// }
+
+
+//　３点リーダー　全ブラウザ対応（１行のみ）
+// .p-lineup__text {
+//     font-size: rem(14);
+//     width: 100%;
+//     overflow: hidden;
+//     white-space:nowrap;
+//     text-overflow: ellipsis;
+// }
+
+
+// ３点リーダー　全ブラウザ対応　JQを使用
+.p-lineup__text {
+    font-size: rem(13);
+    width: 100%;
+    height: rem(42);
+    overflow: hidden;
+}
+
+
+.p-lineup__price {
+    font-size: rem(14);
+    font-weight: $bold;
+}
+
+

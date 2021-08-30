@@ -1,0 +1,18 @@
+.c-section {
+    margin-bottom: rem(60);
+}
+
+.c-section__head {
+    margin-bottom: rem(20);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: rem(1) solid #f2f2f2;
+}
+
+.c-section__title {
+    font-size: rem(20);
+    @include mq(){
+        font-size: rem(30);
+    }
+}

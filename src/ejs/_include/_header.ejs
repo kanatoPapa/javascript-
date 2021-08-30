@@ -1,0 +1,23 @@
+<header class="l-header">
+    <div class="l-inner l-header__inner">
+        <h1 class="l-header__logo">
+            <a href="index.html"><img src="<%= path.img %>logo_black.png" alt=""></a>
+        </h1>
+        <nav class="l-header__nav u-desktop">
+            <%_ for(let i = 0; i<header__link.length; i++ ){ _%>
+                <a href="<%- header__link[i].link %>" class="l-header__link"><%- header__link[i].name %></a>
+            <%_ } _%>
+            <!-- <a href="" class="l-header__link">MEN</a>
+            <a href="" class="l-header__link">WOMEN</a>
+            <a href="" class="l-header__link">KIDS</a> -->
+        </nav>
+
+        <form action="" class="c-searchBox">
+            <button type="submit" class="c-searchBox_btn"></button>
+            <input type="text" class="c-searchBox__text" placeholder="何かお探しですか？" name="freeword">
+        </form>
+        <!-- ハンバーガーボタン -->
+        <div class="c-gnav__btn u-mobile" id="js_c-gnav__btn"><span></span><span></span><span></span></div>
+    </div>
+</header>
+<!-- /.header -->

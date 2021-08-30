@@ -1,0 +1,42 @@
+.l-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: rem(45);
+    @include mq(){
+        height: rem(60);
+    }
+}
+
+.l-header__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+}
+
+.l-header__logo {
+
+    width: rem(70);
+
+    a {
+        display: block;
+    }
+    @include mq(){
+        width: rem(95);
+    }
+}
+
+.l-header__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: rem(160);
+}
+
+.l-header__link {
+    display: inline-block;
+    margin-right: rem(10);
+}

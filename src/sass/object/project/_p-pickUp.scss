@@ -1,0 +1,67 @@
+
+.p-pickUp__list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.p-pickUp__list .p-lineup__item {
+    width: 100%;
+    padding-bottom: rem(20);
+    border-bottom: rem(1) solid #f2f2f2;
+    margin-bottom: rem(20);
+    @include mq(){
+        width: calc( 100% / 2 );
+    }
+}
+
+.p-pickUp__list .p-lineup__item a {
+    display: flex;
+}
+
+.p-pickUp__list .p-lineup__image {
+    width: 28%;
+}
+
+.p-pickUp__list .p-lineup__info {
+    padding: 0 rem(3) 0 rem(18);
+}
+
+.p-pickUp__list .p-lineup__name {
+    font-size: rem(13);
+    font-weight: $bold;
+}
+
+//　３点リーダー　chrome safariのみ対応
+// .p-pickUp__list .p-lineup__text {
+//     font-size: rem(14);
+//     display: -webkit-box;
+//     -webkit-box-orient: vertical;
+//     -webkit-line-clamp: 2;
+//     overflow: hidden;
+// }
+
+
+//　３点リーダー　全ブラウザ対応（１行のみ）
+// .p-pickUp__list .p-lineup__text {
+//     font-size: rem(14);
+//     width: 100%;
+//     overflow: hidden;
+//     white-space:nowrap;
+//     text-overflow: ellipsis;
+// }
+
+
+// ３点リーダー　全ブラウザ対応　JQを使用
+.p-pickUp__list .p-lineup__text {
+    font-size: rem(13);
+    padding-bottom: rem(5);
+}
+
+
+.p-pickUp__list .p-lineup__price {
+    font-size: rem(14);
+    font-weight: $bold;
+}
+
+

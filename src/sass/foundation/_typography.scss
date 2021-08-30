@@ -1,0 +1,12 @@
+/* FontFamily */
+$base-font-family: 'Hiragino Kaku Gothic Pro', 'メイリオ', 'ＭＳ Ｐゴシック', sans-serif;
+$second-font-family: "";
+
+body {
+  font-family: $base-font-family;
+}
+
+/* font-weight */
+$regular: 300;
+$normal: 400;
+$bold: 700;

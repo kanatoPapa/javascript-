@@ -1,0 +1,27 @@
+<footer class="l-footer">
+    <div class="l-footer__head">
+        <h2 class="l-footer__logo">
+            <a href="">NINCO</a>
+        </h2>
+        <ul class="p-sns__list">
+            <%_ for(let i = 0; i<sns.length; i++ ){ _%>
+                <li class="p-sns__item">
+                    <a href="<%= sns[i].link %>">
+                        <img src="<%= path.img %><%= sns[i].image %>" alt="<%= sns[i].name %>" class="p-sns__icon">
+                        <span class="p-sns__name"><%= sns[i].name %></span>
+                    </a>
+                </li>
+            <%_ } _%>
+        </ul>
+    </div>
+    <ul class="l-footer__foot">
+        <li class="l-footer__link">
+            <a href="<%= link[i].link %>"><%= link[i].name %></a>
+        </li>
+    </ul>
+</footer>
+
+
+
+</body>
+</html>

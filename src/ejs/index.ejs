@@ -1,0 +1,74 @@
+
+<%- include('./_data/_index_data') %>
+
+<%- include('./_include/_head') %>
+
+<img src="/JavaScriptのsp.png" class="mihon u-mobile" alt="">
+<img src="/JavaScriptのpc.png" class="mihon u-desktop" alt="">
+<%- include('./_include/_header') %>
+
+<div class="keyVisual">
+    <img src="<%= path.img %>banner1.png" alt="">
+</div>
+<!-- /.p-keyVisual -->
+
+<%_ for(let i = 0; i<lineup__category.length; i++ ){ _%>
+    <section class="c-section">
+        <div class="l-inner">
+            <div class="c-section__head">
+                <h2 class="c-section__title"><%= lineup__category[i] %></h2>
+                <%# NEWとPICK UP以外にリンクをつける %>
+                <%_ if( i != 0 && i != 4 ){ _%>
+                    <a href="/" class="more__link">もっと見る</a>
+                <%_ } _%>
+            </div>
+            <%# PICK UPのみ分岐させる %>
+            <%_ if( i != 4 ){ _%>
+                <ul class="p-lineup__list">
+            <%_ }else{ _%>
+                <ul class="p-pickUp__list">
+            <%_ } _%>
+                    <%_ for(let j = 0; j<lineup__item[i].length; j++ ){ _%>
+                        <li class="p-lineup__item">
+                            <a href="<%= lineup__item[i][j].link %>">
+                                <img src="<%= path.img %><%= lineup__item[i][j].image %>" alt="<%= lineup__item[i][j].name %>" class="p-lineup__image">
+                                <div class="p-lineup__info">
+                                    <h3 class="p-lineup__name"><%= lineup__item[i][j].name %></h3>
+                                    <p class="p-lineup__text"><%= lineup__item[i][j].text %></p>
+                                    <p class="p-lineup__price"><%= lineup__item[i][j].price %></p>
+                                </div>
+                            </a>
+                        </li>
+                    <%_ } _%>
+                </ul>
+        </div>
+    </section>
+<%_ } _%>
+
+
+
+<section class="c-section p-brand">
+    <div class="l-inner p-brand__inner">
+        <div class="c-section__head">
+            <h2 class="c-section__title">BRAND</h2>
+        </div>
+        <ul class="p-brand__list">
+            <%_ for(let i = 0; i<brand.length; i++ ){ _%>
+                <li class="p-brand__item"><a href="<%= brand[i].link %> "><%= brand[i].name %></a></li>
+            <%_ } _%>
+        </ul>
+    </div>
+</section>
+
+
+<section class="c-section">
+    <div class="l-inner">
+        <div class="c-section__head">
+            <h2 class="c-section__title">お気に入りしたアイテム♡</h2>
+        </div>
+        <ul class="p-lineup__list">
+        </ul>
+    </div>
+</section>
+
+<%- include('./_include/_footer') %>

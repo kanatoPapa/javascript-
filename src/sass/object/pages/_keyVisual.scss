@@ -1,0 +1,10 @@
+.keyVisual {
+    
+    margin-top: rem(45);
+    margin-bottom: rem(65);
+    @include mq(){
+        margin-top: rem(60);
+        width: rem(683);
+        height: rem(334);
+    }
+}

@@ -1,0 +1,19 @@
+@import "./foundation/**";
+@import "./layout/**";
+@import "./object/component/**";
+@import "./object/project/**";
+@import "./object/utility/**";
+@import "./object/pages/**";
+
+
+// * {
+//     outline: 2px solid blue;
+// }
+
+.mihon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $layer-background;
+    opacity: 0.4;
+}
